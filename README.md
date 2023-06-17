@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img width="300" src="https://raw.githubusercontent.com/mickambar19/create-node-ts-cli/blob/main/media/node-ts-cli-logo.svg?sanitize=true" alt="node-ts-cli">
+  <img width="300" src="https://raw.githubusercontent.com/mickambar19/create-node-ts-cli/main/media/node-ts-cli-logo.svg?sanitize=true" alt="node-ts-cli">
   <br>
   <br>
 </h1>
