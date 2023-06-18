@@ -12,8 +12,23 @@ Using this tool you will quickly start creating your own cli tools either for pe
 
 ## Getting started
 
+- Create the project by executing the following command
+
 ```
-    $ npm init node-ts-cli@latest
+    $ npm init node-ts-cli@latest my-project
+```
+
+- Install the dependencies
+
+```
+  $ cd my-project
+  $ yarn install
+```
+
+- Start creating the code in the src folder using typescript and run it with dev
+
+```
+  $ yarn dev
 ```
 
 ## Motivation and features
