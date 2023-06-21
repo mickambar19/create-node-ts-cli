@@ -11,7 +11,7 @@ export const TEMPLATE_FILE_CONFIG: Record<string, FILE_CONFIG> = {
   '.eslintrc.json': {
     active: true,
   },
-  '.gitignore': {
+  '.gitignore-sample': {
     active: true,
     variables: [],
     targetFileName: '.gitignore',
