@@ -14,10 +14,12 @@ export const TEMPLATE_FILE_CONFIG: Record<string, FILE_CONFIG> = {
   '.gitignore': {
     active: true,
     variables: [],
+    targetFileName: '.gitignore',
   },
-  '.npmignore': {
+  '.npmignore-sample': {
     active: true,
     variables: [],
+    targetFileName: '.npmignore',
   },
   '.nvmrc': {
     active: true,
