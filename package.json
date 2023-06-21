@@ -45,6 +45,7 @@
     "vitest": "^0.32.2"
   },
   "dependencies": {
+    "@inquirer/prompts": "^2.1.1",
     "commander": "^11.0.0",
     "ora": "^6.3.1"
   }
