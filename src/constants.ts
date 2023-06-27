@@ -43,7 +43,7 @@ export const TEMPLATE_FILE_CONFIG: Record<string, FILE_CONFIG> = {
   },
   'package.json': {
     active: true,
-    variables: ['PACKAGE_NAME'],
+    variables: ['PACKAGE_NAME', 'GIT_USER_NAME', 'AUTHOR_NAME'],
   },
   'tsconfig-sample.json': {
     active: true,

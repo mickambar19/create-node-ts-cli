@@ -11,7 +11,11 @@ const isValidPackageName = (packageName: string): boolean => {
   return /^([a-z]+[-_]{1}?)*[a-z]+$/.test(packageName)
 }
 
-export const creator = async (packageName: string) => {
+export const creator = async (
+  packageName: string,
+  authorName: string,
+  gitUserName: string
+) => {
   if (!isValidPackageName(packageName)) {
     console.log(
       `
@@ -20,6 +24,12 @@ export const creator = async (packageName: string) => {
       `
     )
 
+    return
+  }
+  if (authorName.length < 2) {
+    console.log(
+      '\x1b[31m Make sure you provide an author name with a correct name.\x1b[0m'
+    )
     return
   }
 
@@ -40,6 +50,13 @@ export const creator = async (packageName: string) => {
     spinner.stop()
     return
   }
+
+  const replacers: Record<string, string | undefined> = {
+    AUTHOR_NAME: authorName,
+    PACKAGE_NAME: packageName,
+    GIT_USER_NAME: gitUserName,
+  }
+
   Object.entries(TEMPLATE_FILE_CONFIG).map(async ([fileName, config]) => {
     const { variables, active, targetFileName } = config
     const newFilePath = path.join(newPackageFolder, targetFileName || fileName)
@@ -52,7 +69,7 @@ export const creator = async (packageName: string) => {
       const variablesRegExp = new RegExp(`(${variables.join('|')})`, 'g')
       fileContent = fileContent.replace(
         variablesRegExp,
-        (match) => `${packageName}${match.toLowerCase()}`
+        (match) => `${replacers[match] || match}`
       )
       await writeFile(newFilePath, fileContent)
     }

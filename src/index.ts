@@ -21,6 +21,8 @@ const createProgram = async (): Promise<Command> => {
   program
     .command('creator', { isDefault: true })
     .addArgument(new Argument('<packageName>', 'package name'))
+    .addArgument(new Argument('<authorName>', 'author name'))
+    .addArgument(new Argument('<gitUserName|gitHandler>', 'git user name'))
     .addOption(new Option('-w, --wizard', 'select opt-ins'))
     .action(creator)
 

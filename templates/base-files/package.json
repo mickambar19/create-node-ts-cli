@@ -24,11 +24,11 @@
     "node": ">=18.16.0"
   },
   "bugs": {
-    "url": "https://github.com/USER_NAME/PROJECT_NAME/issues"
+    "url": "https://github.com/GIT_USER_NAME/PACKAGE_NAME/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/USER_NAME/PROJECT_NAME.git",
+    "url": "https://github.com/GIT_USER_NAME/PACKAGE_NAME.git",
     "directory": "bin"
   },
   "devDependencies": {
